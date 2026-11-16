@@ -1,0 +1,85 @@
+# ============================================================
+# Job Applier - Configuration File
+# ============================================================
+
+# Your personal details (used in forms)
+profile:
+  full_name: "Your Full Name"
+  email: "your.email@example.com"
+  phone: "+91-XXXXXXXXXX"
+  location: "City, Country"
+  linkedin_url: "https://linkedin.com/in/yourprofile"
+  github_url: "https://github.com/yourusername"
+  portfolio_url: ""
+  current_title: "Software Engineer"
+  years_of_experience: 3
+  notice_period: "30 days"
+  expected_salary: "15 LPA"
+  current_salary: "10 LPA"
+  willing_to_relocate: true
+  work_authorization: "Authorized to work"
+
+# Job search preferences
+search:
+  keywords:
+    - "Python Developer"
+    - "Backend Engineer"
+    - "Software Engineer"
+  locations:
+    - "Bangalore"
+    - "Remote"
+    - "Hyderabad"
+  experience_min: 1    # years
+  experience_max: 5    # years
+  job_type: "full-time"   # full-time | part-time | contract | internship
+  remote_preference: "hybrid"  # remote | hybrid | onsite | any
+  blacklisted_companies:
+    - "Company You Hate"
+  blacklisted_keywords:
+    - "unpaid"
+    - "internship only"
+  min_salary: 0        # 0 = no filter
+
+# Platform credentials
+platforms:
+  linkedin:
+    enabled: true
+    email: "your.email@example.com"
+    password: "your_password"
+    easy_apply_only: true
+    daily_limit: 20
+
+  indeed:
+    enabled: true
+    email: "your.email@example.com"
+    password: "your_password"
+    daily_limit: 15
+
+  naukri:
+    enabled: true
+    email: "your.email@example.com"
+    password: "your_password"
+    daily_limit: 20
+
+  glassdoor:
+    enabled: false
+    email: "your.email@example.com"
+    password: "your_password"
+    daily_limit: 10
+
+# Automation behavior
+automation:
+  headless: false          # Set true to run browser in background
+  slow_mo: 500             # Milliseconds between actions (human-like)
+  delay_between_apps: 30   # Seconds to wait between applications
+  max_daily_applications: 50
+  resume_file: "resumes/resume.pdf"
+  cover_letter_template: "config/cover_letter_template.txt"
+  retry_failed: true
+  screenshot_on_error: true
+
+# Scheduler settings
+scheduler:
+  enabled: false
+  run_at: "09:00"          # 24-hour format
+  days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]

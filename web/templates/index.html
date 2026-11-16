@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Applier — Auto Apply Bot</title>
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Sidebar -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <span class="brand-icon">🤖</span>
+    <span class="brand-name">JobBot</span>
+  </div>
+  <nav class="sidebar-nav">
+    <a class="nav-item active" data-page="dashboard" onclick="navigate('dashboard',this)">
+      <span class="nav-icon">📊</span><span>Dashboard</span>
+    </a>
+    <a class="nav-item" data-page="run" onclick="navigate('run',this)">
+      <span class="nav-icon">▶️</span><span>Run Bot</span>
+    </a>
+    <a class="nav-item" data-page="applications" onclick="navigate('applications',this)">
+      <span class="nav-icon">📋</span><span>Applications</span>
+    </a>
+    <div class="nav-section">Settings</div>
+    <a class="nav-item" data-page="profile" onclick="navigate('profile',this)">
+      <span class="nav-icon">👤</span><span>My Profile</span>
+    </a>
+    <a class="nav-item" data-page="search" onclick="navigate('search',this)">
+      <span class="nav-icon">🔍</span><span>Job Search</span>
+    </a>
+    <a class="nav-item" data-page="platforms" onclick="navigate('platforms',this)">
+      <span class="nav-icon">🌐</span><span>Platforms</span>
+    </a>
+    <a class="nav-item" data-page="resume" onclick="navigate('resume',this)">
+      <span class="nav-icon">📄</span><span>Resume</span>
+    </a>
+    <a class="nav-item" data-page="logs" onclick="navigate('logs',this)">
+      <span class="nav-icon">📝</span><span>Logs</span>
+    </a>
+  </nav>
+  <div class="sidebar-footer">
+    <div class="bot-status" id="bot-status-indicator">
+      <span class="status-dot idle"></span>
+      <span class="status-text">Bot Idle</span>
+    </div>
+  </div>
+</aside>
+
+<!-- Main Content -->
+<main class="main">
+  <div class="topbar">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="topbar-title" id="page-title">Dashboard</div>
+    <div class="topbar-actions">
+      <div class="bot-pill" id="top-bot-pill">
+        <span class="dot idle" id="top-dot"></span>
+        <span id="top-status-text">Idle</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-content" id="page-content">
+    <!-- Pages injected by JS -->
+  </div>
+</main>
+
+<!-- Toast Notification -->
+<div class="toast" id="toast"></div>
+
+<script src="/static/js/app.js"></script>
+</body>
+</html>
